@@ -1,0 +1,137 @@
+{
+  "dataset_name": "soft_robot_vla_curved_trajectories",
+  "version": "2.0",
+  "num_trajectories": 100000,
+  "seed": 42,
+  "trajectory_types": [
+    "circle",
+    "ellipse",
+    "figure8",
+    "parabola",
+    "heart",
+    "spiral",
+    "lissajous",
+    "wave",
+    "multi_frequency",
+    "random_smooth",
+    "hybrid"
+  ],
+  "trajectory_distribution": {
+    "circle": 12999,
+    "ellipse": 9505,
+    "figure8": 11705,
+    "parabola": 9060,
+    "heart": 9054,
+    "spiral": 9495,
+    "lissajous": 4940,
+    "wave": 6843,
+    "multi_frequency": 9376,
+    "random_smooth": 9733,
+    "hybrid": 7290
+  },
+  "difficulty_distribution": {
+    "easy": 284,
+    "medium": 51693,
+    "hard": 47985,
+    "very_hard": 38
+  },
+  "splits": {
+    "train": 80000,
+    "validation": 10000,
+    "test": 10000
+  },
+  "workspace": {
+    "min": [
+      -0.2849999964237213,
+      -0.27000001072883606,
+      0.05000000074505806
+    ],
+    "max": [
+      0.2849999964237213,
+      0.27000001072883606,
+      0.20499999821186066
+    ]
+  },
+  "pressure_limits": [
+    0.0,
+    3.0
+  ],
+  "position_statistics": {
+    "min": [
+      -0.2632885277271271,
+      -0.21873967349529266,
+      0.05005211383104324
+    ],
+    "max": [
+      0.24647638201713562,
+      0.23509401082992554,
+      0.2040729969739914
+    ],
+    "mean": [
+      0.003448185743764043,
+      0.0012650226708501577,
+      0.127621591091156
+    ],
+    "std": [
+      0.05034344643354416,
+      0.04615747928619385,
+      0.03343683108687401
+    ]
+  },
+  "pressure_statistics": {
+    "min": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "max": [
+      3.0,
+      3.0,
+      3.0
+    ],
+    "mean": [
+      1.9501283168792725,
+      1.9497588872909546,
+      1.9485719203948975
+    ],
+    "std": [
+      1.5488473176956177,
+      1.5489145517349243,
+      1.5486749410629272
+    ]
+  },
+  "path_statistics": {
+    "mean": 0.4149378965717554,
+    "std": 0.22159505343020242,
+    "minimum": 0.0800105407834053,
+    "maximum": 1.5997169017791748
+  },
+  "pressure_step_statistics": {
+    "mean": 0.00040439747161615593,
+    "std": 0.0025141695913439015,
+    "maximum": 0.07846090942621231
+  },
+  "inverse_model": {
+    "checkpoint": "model/inverse_mlp.pt",
+    "architecture": [
+      3,
+      128,
+      128,
+      128,
+      64,
+      3
+    ],
+    "input": "XYZ target position",
+    "output": "3 actuator pressures",
+    "pressure_units": "bar"
+  },
+  "generation": {
+    "min_points": 80,
+    "max_points": 220,
+    "min_path_length": 0.08,
+    "max_path_length": 1.6,
+    "max_position_step": 0.035,
+    "max_pressure_step": 0.2
+  },
+  "generation_time_seconds": 107.30665612220764
+}

@@ -1,0 +1,23 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+.vscode/
+venv/
+.venv/
+
+# Do not commit datasets / data files
+*.npz
+*.npy
+
+# Do not commit model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Generated results
+results/
+
+data/experiments/
+data/simulation_log.csv
+dataset/data/
